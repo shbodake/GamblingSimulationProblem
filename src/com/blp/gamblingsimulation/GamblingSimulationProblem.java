@@ -8,17 +8,15 @@ public class GamblingSimulationProblem {
         int win =0;
         int loss =0;
         int net_stake_after_30_Days=0;
-        for (int k = 1; k <= 20; k++) {
+        for (int k = 1; k <= 30; k++) {
             stake_of_Gambler = 100;
             while (stake_of_Gambler <= 149 && stake_of_Gambler >= 51) {
                 Random ran = new Random();
                 int i = ran.nextInt(2);
                 if (i == 0) {
                     stake_of_Gambler = stake_of_Gambler + bet_for_Game;
-                    count++;
                 } else {
                     stake_of_Gambler = stake_of_Gambler - bet_for_Game;
-                    count++;
                 }
                 if (stake_of_Gambler == 150) {
                     win++;
@@ -33,7 +31,7 @@ public class GamblingSimulationProblem {
             System.out.println("The No of Games Played by Gamer : " + count);
             System.out.println("The no of days Gamer win : "+win);
             System.out.println("The no of days Gamer loss : "+loss);
-            System.out.println("The amount gain(+) or loss(-) after 20 days : "+net_stake_after_30_Days);
+            System.out.println("The amount gain(+) or loss(-) after 30 days : "+net_stake_after_30_Days);
         }
     }
 
